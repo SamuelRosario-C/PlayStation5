@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #00d4ff;
+    background: linear-gradient(48deg, #00d4ff 0%, #fb5283 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 79%;
+    box-shadow: 0 0 1rem 0 #00000033;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0;
+    overflow: hidden;
+
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin: 30px 0;
+}
+
+.nav-menu {
+    width: 100%;
+    text-align: right;
+}
+
+.nav-menu li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.nav-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #fb5283;
+}
+
+/* container Playstation */
+.playstation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 17px 0;
+}
+
+/* container Playstation */
+
+/* Informações PlayStation */
+.playstation-info {
+    margin-left: 50px;
+    position: relative;
+}
+
+.playstation-info::before {
+    content: "";
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(#fb5283, #ff3527);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.playstation-info h2 {
+    font-size: 54px;
+}
+
+.playstation-info h3 {
+    font-size: 30px;
+    color: #70707070;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+.playstation-info p {
+    font-size: 16px;
+    color: #7b7b7b7b;
+    font-weight: 100;
+}
+
+.playstation-info h4 {
+    font-size: 20px;
+    color: black;
+    margin: 30px 0;
+}
+
+.playstation-info button {
+    width: 140px;
+    border: none;
+    padding: 12px 10px;
+    outline: none;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.playstation-info button img {
+    width: 30px;
+    display: none;
+}
+
+.playstation-info button:hover{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.playstation-info button:hover img{
+    display: block;
+}
+
+/* Informações PlayStation */
+
+/* Produto PlayStation */
+
+.playstation-product {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.controller {
+    width: 90%;
+    z-index: 2;
+    animation: moveController 2s infinite alternate ease-in-out;
+}
+
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    height: 100%;
+    width: 60%;
+    border-radius: 20px 0 0 20px;
+    z-index: 1;
+    transform: rotateX(150px);
+}
+
+.playstation-product button {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.playstation-product button img {
+    height: 50%;
+    width: 60%;
+}
+
+/* Produto PlayStation */
+
+/* Rede Social PlayStation */
+
+.rede-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rede-social img {
+    height: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Rede Social PlayStation */
+
+.menu-icon {
+    display: none;
+    width: 25px;
+    margin-right: 15px;
+}
+
+/* Media  Query*/
+
+@media(max-width: 760px) {
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    .playstation {
+        flex-direction: column-reverse;
+        margin: 60px 0 0 0;
+    }
+
+    .playstation h3 {
+        margin: 5px 0;
+    }
+
+    .playstation h4 {
+        margin: 20px 0;
+    }
+
+    .playstation-product {
+        margin-bottom: 30px;
+    }
+
+    .rede-social {
+        margin-top: 20px;
+    }
+
+    #menu-list {
+        position: relative;
+        top: 60px;
+        left: 60px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu li {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+@keyframes moveController {
+    from {
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
+}
